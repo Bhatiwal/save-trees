@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save tree</title>
+    <style>
+        span{
+            color: aquamarine;
+            background-color: red;
+            padding:10px 20px;
+        }
+        body{
+            text-align: center;
+            width:100%;
+            background-attachment: fixed;
+            background-image: linear-gradient(rgb(173, 226, 247,0.6),rgb(86, 86, 254,0.6),rgb(31, 232, 31,0.6));
+
+        }
+        h2{
+            margin: 50px;
+        }
+        img{
+            width: 35%;
+            height:300px;
+        }
+        button{
+            margin:30px ;
+            width: 120px;
+            height:40px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="m1">
+        <h1><span>SAVE TREES</span></h1>
+        <h2><u id="text1">Here are 5 reasons for why to save trees.</u></h2>
+        <img src="tree7.webp" id="img1"><br>
+        <button type="button"  id="btn1" onclick="show1()">NEXT</button>
+
+
+    </div>
+
+
+    <script>
+        function show1(){
+         document.getElementById('text1').innerHTML="Trees purify our air and combat climate change."
+         document.getElementById('img1').setAttribute("src","tree2.jpg")
+         document.getElementById('btn1').remove()
+
+         let div=document.getElementById('m1')
+         let button=document.createElement('button')
+         button.innerHTML="NEXT"
+         button.setAttribute("id","btn1")
+         button.addEventListener("click", show2);
+div.append(button)
+
+        }
+
+
+
+        let show2=()=>{
+            document.getElementById('text1').innerHTML="Trees protect against floods and water pollution."
+         document.getElementById('img1').setAttribute("src","tree8.webp")
+         document.getElementById('btn1').remove()
+
+         let div=document.getElementById('m1')
+         let button=document.createElement('button')
+         button.innerHTML="NEXT"
+         button.setAttribute("id","btn1")
+         button.addEventListener("click", show3);
+div.append(button)
+
+        }
+
+
+        function show3(){
+            document.getElementById('text1').innerHTML="Trees regulate the water cycle."
+         document.getElementById('img1').setAttribute("src","tree3.jpg")
+         document.getElementById('btn1').remove()
+
+         let div=document.getElementById('m1')
+         let button=document.createElement('button')
+         button.innerHTML="NEXT"
+         button.setAttribute("id","btn1")
+         button.addEventListener("click", show4);
+div.append(button)
+        }
+
+        function show4(){
+            document.getElementById('text1').innerHTML="Trees give the home to the widelife we love."
+         document.getElementById('img1').setAttribute("src","tree5.jpg")
+         document.getElementById('btn1').remove()
+
+         let div=document.getElementById('m1')
+         let button=document.createElement('button')
+         button.innerHTML="NEXT"
+         button.setAttribute("id","btn1")
+         button.addEventListener("click", show5);
+div.append(button)
+        }
+        function show5(){
+            document.getElementById('text1').innerHTML="Trees improve the soil quality."
+         document.getElementById('img1').setAttribute("src","tree6.jpeg")
+         document.getElementById('btn1').remove()
+
+         let div=document.getElementById('m1')
+         let button=document.createElement('button')
+         button.innerHTML="NEXT"
+         button.setAttribute("id","btn1")
+         button.addEventListener("click", show1);
+div.append(button)
+        }
+
+
+
+    </script>
+</body>
+</html>
